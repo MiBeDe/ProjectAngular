@@ -1,0 +1,47 @@
+<section class="content-header">
+</section>
+
+<section class="content">
+    <section class="invoice">
+
+      <form [formGroup]="alterarForm" novalidate>
+          <div class="row">
+              <div class="col-xs-12 col-sm-9">
+                <p class="lead"><strong>Seus Dados:</strong></p>
+              </div>
+                <div class="col-sm-6 col-xs-12 hidden">
+                  <mt-input-container errorMessage="Campo obrigatório e com 2 caracteres" label="Id">
+                    <input class="form-control" formControlName="idCliente" autocomplete="off" />
+                  </mt-input-container>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                  <mt-input-container errorMessage="Campo obrigatório e com 2 caracteres" label="Nome">
+                    <input class="form-control" formControlName="nome" placeholder="Nome" autocomplete="off" />
+                  </mt-input-container>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                  <mt-input-container errorMessage="Campo obrigatório e com 2 caracteres" label="Sobrenome">
+                    <input class="form-control" formControlName="sobrenome" placeholder="Sobrenome" autocomplete="off" />
+                  </mt-input-container>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                  <mt-input-container errorMessage="Campo obrigatório e com 5 caracteres" label="RG">
+                    <input class="form-control" formControlName="rg" placeholder="RG" autocomplete="off" />
+                  </mt-input-container>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                  <mt-input-container errorMessage="Campo obrigatório e com 5 caracteres" label="CPF">
+                    <input class="form-control" formControlName="cpf" placeholder="CPF" autocomplete="off" />
+                  </mt-input-container>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                     <button (click)="alterarCliente(alterarForm.value)" class="btn btn-success pull-right">
+                      <i class="fa fa-thumbs-up"></i> Enviar
+                     </button>
+                    </div>
+                </div>
+          </div>
+      </form>
+    </section>
+</section>

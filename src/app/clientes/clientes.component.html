@@ -1,0 +1,19 @@
+<div class=container>
+  <div style="margin-bottom: 5px;">
+      <span id="selectedRows" class="hidden"></span>
+      <div class="test-header" style="margin-top: 15px"></div>
+      <button class="btn btn-warning" [routerLink]="['/alterar', numeroRow]" [disabled]="teste === false">Alterar</button>
+      <button class="btn btn-danger" (click)="deleteCliente()" [disabled]="teste === false" style="margin-left: 10px">Excluir</button>
+
+</div>
+
+  <ag-grid-angular
+    style="width: 1150px; height: 500px;"
+    class="ag-theme-balham"
+    [rowData]="clientes"
+    [rowSelection]="rowSelection"
+    [columnDefs]="columnDefs"
+    (selectionChanged)="onSelectionChanged($event)"
+    (gridReady)="onGridReady($event)"
+    ></ag-grid-angular>
+</div>
